@@ -18,7 +18,6 @@ const ArtistCard = ({ artistData }) => {
             <h3 className="text-2xl">{artistData.artist}</h3>
           </div>
           <button
-            onClick={handleViewEventsClick}
             className=" bg-gradient-to-r from-orange-400 to-teal-600 text-white px-4 py-2 rounded-md font-medium hover:opacity-70"
           >
             View Events
