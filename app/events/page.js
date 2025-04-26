@@ -1,7 +1,7 @@
 "use client"; 
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense,useEffect, useState } from "react";
 import EventCard from "@/components/EventCard";
 
 const EventsPage = () => {
@@ -54,4 +54,11 @@ const EventsPage = () => {
   );
 };
 
-export default EventsPage;
+const SuspenseWrapper = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <EventsPage />
+  </Suspense>
+);
+
+
+export default SuspenseWrapper;
